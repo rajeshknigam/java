@@ -3,4 +3,15 @@
   <groupId>com.ashu.sql.postgresql</groupId>
   <artifactId>example1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.postgresql</groupId>
+  		<artifactId>postgresql</artifactId>
+  		<version>42.1.1</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  </dependencies>
+  <properties>
+  	<exec.mainClass>com.hcl.sql.postgresql.runner.Runner</exec.mainClass>
+  </properties>
 </project>

@@ -17,9 +17,10 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
 			Statement stmt = con.createStatement();
 
-			String sql = "INSERT INTO EMPLOYEE (FNAME, LNAME, ECODE, EMAIL) "
-					+ "VALUES (\""+emp.getFname()+"\", \""+ emp.getLname()+"\", \""+ emp.getEcode()+"\", \""+emp.getEmail()+"\" );";
-
+			String sql = "INSERT INTO public.\"EMPLOYEE\" (\"ID\", \"FNAME\", \"LNAME\", \"ECODE\", \"EMAIL\") "
+					+ "VALUES (3, '"+emp.getFname()+"', '"+ emp.getLname()+"', '"+ emp.getEcode()+"', '"+emp.getEmail()+"' );";
+				
+			System.out.println("Execurting SQL:"+sql);
 			stmt.executeUpdate(sql);
 			stmt.close();
 			con.close();
